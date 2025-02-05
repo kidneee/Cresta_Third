@@ -5,16 +5,12 @@
 * ========================= */
 :root {
   /* フォントサイズ */
-  --fs-logo: 1.625rem; /* 26px */
-  --fs-fv-copyEn: clamp(2.313rem, 4.86vw, 4.375rem); /* 37px 〜 70px */
-  --fs-fv-copyJa: clamp(1.875rem, 2.78vw, 2.5rem); /* 30px 〜 40px */
-  --fs-sec-title: clamp(1.875rem, 4.17vw, 3.75rem); /* 30px 〜 60px */
-  --fs-sec-copy: clamp(1.25rem, 2.08vw, 2.5rem); /* 20px 〜 40px */
-  --fs-16: 1rem; /* 16px */
-  --fs-20: 1.25rem; /* 16px */
-  --fs-btn: 1rem; /* 16px */
-  --fs-footer-copyright: 0.875rem; /* 14px */
-  --fs-bg-text: clamp(2.5rem, 6.25vw, 5.625rem); /* 40px 〜 90px */
+  --fs-fv-copyEn: clamp(3.5rem, 7.29vw, 4.5rem); /* 56px 〜 72px */
+  --fs-fv-copyJa: clamp(1rem, 2.08vw, 1.25rem); /* 16px 〜 20px */
+  --fs-c-title: clamp(1.75rem, 4.17vw, 2rem); /* 28px 〜 32px */
+  --fs-c-txt: clamp(0.875rem, 2.08vw, 1rem); /* 14px 〜 16px */
+  --fs-btn: 0.75rem; /* 12px */
+  --fs-footer-copyright: 0.625rem; /* 10px */
 
   /* 固定色 */
   --black: #333;
@@ -80,8 +76,7 @@ img {
 
 /* 英語フォント指定 */
 [lang="en"] {
-  font-family: "Noto Serif", serif;
-  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* ============================
