@@ -118,8 +118,9 @@ img {
 * ========================= */
 .header {
   position: fixed;
-  padding: 20px;
+  padding: 20px 15px;
   width: 100%;
+  z-index: 10;
 }
 
 .header__inner {
@@ -142,7 +143,7 @@ img {
   transform: translateY(-50%);
   height: 10px;
   position: absolute;
-  right: 20px;
+  right: 15px;
 }
 
 .hamburger {
@@ -286,7 +287,6 @@ img {
   FV
 -------------------------*/
 .fv__inner {
-  position: relative;
   background-color: var(--bg-fv);
   background: linear-gradient(90deg, var(--white) 0%, var(--white) 24.53%, var(--bg-fv) 24.53%, var(--bg-fv) 75.47%);
   z-index: -2;
@@ -295,14 +295,14 @@ img {
 }
 
 .fv__bg-img {
-  position: absolute;
+  position: relative;
   top: 0;
   background-image: url(../img/kv-img.png);
   background-size: cover;
   background-position: center;
   width: 76.53vw;
   height: 580px;
-  z-index: -1;
+  z-index: 2;
 }
 
 /* FVキャッチコピー */
@@ -310,7 +310,7 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 20px;
+  left: 110px;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -327,6 +327,7 @@ img {
   font-size: var(--fs-fv-copyEn);
   font-weight: 800;
   line-height: 1.036;
+  letter-spacing: 0.063em;
 }
 
 /*-------------------------
