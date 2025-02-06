@@ -148,6 +148,7 @@ img {
   height: 10px;
   position: absolute;
   right: 15px;
+  z-index: 100;
 }
 
 .hamburger {
@@ -273,15 +274,15 @@ img {
 }
 
 .hamburger[aria-expanded="true"] .hamburger__line::before {
-  -webkit-transform: rotate(-315deg);
-  -ms-transform: rotate(-315deg);
-  transform: rotate(-315deg);
+  -webkit-transform: rotate(-345deg);
+  -ms-transform: rotate(-345deg);
+  transform: rotate(-345deg);
 }
 
 .hamburger[aria-expanded="true"] .hamburger__line::after {
-  -webkit-transform: rotate(315deg);
-  -ms-transform: rotate(315deg);
-  transform: rotate(315deg);
+  -webkit-transform: rotate(345deg);
+  -ms-transform: rotate(345deg);
+  transform: rotate(345deg);
 }
 
 /* ============================
