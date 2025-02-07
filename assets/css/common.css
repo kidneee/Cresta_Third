@@ -479,6 +479,12 @@ img {
 /*-------------------------
   About
 -------------------------*/
+.about .l-column-wrapper {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .about .l-inner {
   background-image: url(../img/about-img.png);
   background-size: cover;
@@ -488,8 +494,11 @@ img {
 }
 @media screen and (min-width: 768px) {
   .about .l-inner {
-    padding: 60px 89px;
+    padding: 60px 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .about .l-inner::after {
@@ -504,14 +513,13 @@ img {
     z-index: 1;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .about .l-inner {
-    padding: 60px 0;
-    position: relative;
+    padding: 110px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -531,6 +539,7 @@ img {
 }
 @media screen and (min-width: 1440px) {
   .about__content {
+    max-height: 387px;
     padding: 50px 30px;
   }
 }
@@ -608,6 +617,11 @@ img {
 .topics__list-item:nth-child(1) .topics__desc {
   letter-spacing: 0.068em;
 }
+@media screen and (min-width: 768px) {
+  .topics__list-item:nth-child(1) .topics__desc {
+    letter-spacing: 0.04em;
+  }
+}
 
 @media screen and (min-width: 1440px) {
   .topics__link {
@@ -629,7 +643,7 @@ img {
 }
 @media screen and (min-width: 1440px) {
   .contact .l-inner {
-    padding: 60px 0 120px;
+    padding: 58px 0 120px;
   }
 
   .contact__img {
@@ -653,6 +667,11 @@ img {
     max-width: 510px;
     margin-top: -7px;
     margin-bottom: 14px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact__desc.c-text {
+    margin: 0;
   }
 }
 
