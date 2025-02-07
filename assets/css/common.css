@@ -116,7 +116,7 @@ img {
     padding: 40px 30px;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .l-inner {
     max-width: 1100px;
     width: 100%;
@@ -416,17 +416,17 @@ img {
   background-size: cover;
   background-position: center;
   width: 76.53vw;
-  height: 580px;
+  height: 86.957vh;
   z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .fv__bg-img {
-    height: 890px;
+    height: 86.914vh;
   }
 }
 @media screen and (min-width: 1440px) {
   .fv__bg-img {
-    height: 640px;
+    height: 86.486vh;
   }
 }
 
