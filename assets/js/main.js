@@ -84,9 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
     ヘッダーの背景表示
     ===================================================*/
     // スクロール位置がFV(100vh)を超えた場合
-    if (scroll > (fvHeight - 100)) {
+    if (scroll > (fvHeight - 260)) {
       // .headerに背景色をつける
-      document.querySelector('header').style.backgroundColor = '#282F35';
+      document.querySelector('header').style.backgroundColor = '#222';
       // 背景色を戻す
     } else {
       document.querySelector('.header').style.backgroundColor = '';
