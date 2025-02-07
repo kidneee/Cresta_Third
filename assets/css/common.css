@@ -14,8 +14,13 @@
   --fs-date: 0.625rem; /* 10px */
   --fs-footer-copyright: 0.625rem; /* 10px */
   --fs-nav: 1.25rem; /* 20px */
+  --c-content-text: clamp(0.875rem, 2.08vw, 1rem); /* 14px 〜 16px */
+  /* 下層ページ */
+  --fs-c-page-title: clamp(3.25rem, 7.29vw, 4.5rem); /* 52px 〜 72px */
+  --fs-c-sub-title: clamp(1rem, 2.08vw, 1.25rem); /* 16px 〜 20px */
+  --fs-c-section-title: 2rem; /* 32px */
+  /* その他 */
   --fs-txt-12: clamp(0.75rem, 1.82vw, 0.875rem); /* 12px 〜 14px */
-  --fs-txt-14: clamp(0.875rem, 2.08vw, 1rem); /* 14px 〜 16px */
   --fs-txt-24: 1.5rem; /* 16px */
 
   /* 固定色 */
@@ -80,6 +85,10 @@ img {
 .c-text {
   font-size: var(--fs-c-txt);
   line-height: 1;
+}
+
+.c-content-text {
+  font-size: var(--fs-c-content-text);
 }
 
 /* Read Moreボタン */
@@ -159,6 +168,29 @@ img {
 /* 背景色 */
 .l-bg-color {
   background-color: var(--bg-lightGray);
+}
+
+/*-------------------------
+ 下層ページ
+-------------------------*/
+/* ページタイトル */
+.c-page-title {
+  font-size: var(--fs-c-page-title);
+  line-height: 1.212;
+  font-weight: 800;
+}
+
+.c-sub-title {
+  font-size: var(--fs-c-sub-title);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* セクションタイトル */
+.c-section-title {
+  font-size: var(--fs-c-section-title);
+  letter-spacing: 0.068em;
+  font-weight: 800;
 }
 
 /* ============================
@@ -555,7 +587,7 @@ img {
 }
 
 .about__desc {
-  font-size: var(--fs-txt-14);
+  font-size: var(--fs-c-content-text);
   line-height: 2;
 }
 
@@ -714,3 +746,14 @@ img {
 /* ============================
 * Contactページ
 * ========================= */
+.company__list-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--c-content-text);
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.company__def {
+  width: 50%;
+}

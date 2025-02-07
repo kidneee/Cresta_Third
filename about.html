@@ -3,9 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DIGSMILE inc.</title>
+  <!--Favicon-->
+  <link rel="icon" href="./assets/img/favicon.ico">
+  <!--Googleフォント-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <!--CSSファイル-->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 <body>
-  
+
+  <header class="header">
+    <div class="header__inner">
+
+      <!-- ロゴ -->
+      <div class="header__logo">
+        <a href="./index.html" class="header__logo-link">
+          <img src="./assets/img/site-logo.svg" alt="DIGSMILE inc" width="189" height="21" class="header__img">
+        </a>
+      </div>
+
+      <!-- ハンバーガーメニュー -->
+      <div class="hamburger__wrapper">
+        <span class="hamburger__label">Menu</span>
+        <button type="button" id="js-buttonHamburger" class="hamburger" aria-controls="drawerMenu" aria-expanded="false">
+          <span class="hamburger__line">
+            <span class="hidden-text">メニューを開閉する</span>
+          </span>
+        </button>
+      </div>
+
+      <!-- メニュー -->
+      <div id="drawerMenu" class="nav__menu-wrapper">
+        <div class="nav__menu-content">
+          <img src="./assets/img/menu-logo.svg" width="42" height="45" alt="" class="nav__menu-logo">
+          <nav class="nav__menu">
+            <ul class="nav__menu-list" lang="en">
+              <li class="nav__menu-item"><a href="./about.html" class="nav__menu-link">About us</a></li>
+              <li class="nav__menu-item"><a href="index.html#works" class="nav__menu-link">Works</a></li>
+              <li class="nav__menu-item"><a href="index.html#culture" class="nav__menu-link">Culture</a></li>
+              <li class="nav__menu-item"><a href="index.html#topics" class="nav__menu-link">Topics</a></li>
+              <li class="nav__menu-item"><a href="./contact.html" class="nav__menu-link">Contact</a></li>
+            </ul>
+          </nav>
+        </div><!-- /.nav__menu-content -->
+      </div><!-- /.nav__menu-wrapper -->
+
+    </div><!-- /.header__inner -->
+  </header>
+
+  <main class="main page-about">
+    <h1 class="c-page-title" lang="en">
+        About us
+        <span class="c-sub-title">DIGSMILEについて</span>
+      </h1>
+
+    <!-- Vision -->
+    <section class="vision">
+      <div class="l-inner">
+        <h2 class="c-section-title" lang="en">Vision</h2>
+        <p>デザインで人を笑顔にする会社</p>
+        <div class="vision__content">
+          <p class="c-content-text">私達のデザインで人が笑顔になる。</p>
+          <p class="c-content-text">そんなデザインを目指しています。</p>
+          <p class="c-content-text">
+            私達が考える人を笑顔にできるデザインとは、
+            デザインが課題を適切に解決ができているかどうか。
+          </p>
+          <p class="c-content-text">
+            ビジュアルだけではなく、<br>
+            本当に求められているものは何かを考え抜いて、<br>
+            デザインしていきたい。
+          </p>
+          <p class="c-content-text">
+            誰かの幸せを創ることも、<br>
+            世界の常識を変えていくことだってできる。<br>
+          </p>
+          <p class="c-content-text">私達はデザインの力を信じています。</p>
+        </div>
+      </div><!-- /.l-inner -->
+    </section>
+
+    <!-- CEO Message -->
+    <section>
+      <div class="l-inner">
+        <h2 class="c-section-title" lang="en">CEO Message</h2>
+        <div class="ceo__content">
+          <p class="c-content-text">良いデザインは人を幸せにする。</p>
+          <p class="c-content-text">私達はそう信じています。</p>
+          <p class="c-content-text">デザインを通して、ビジネスの課題とユーザーの課題を解決することで、世の中を幸せにしていきたい。</p>
+          <p class="c-content-text">現在はあらゆるプロダクトがデジタル化されており、デザイナーに対する需要はますます高まっています。それとともに、期待される役割も幅広くなりつつあります。</p>
+          <p class="c-content-text">クリエイティブで社会の可能性を切り開いていく。</p>
+          <p class="c-content-text">変化の激しい現代、私達はデザインの力で社会を良い方向に変革していく企業を目指していきます。</p>
+        </div>
+        <img src="./assets/img/ceo-img.png" alt="" width="340" height="230" class="ceo__img">
+      </div><!-- /.l-inner -->
+    </section>
+
+    <!-- Company -->
+    <section>
+      <div class="l-inner">
+        <h2 class="c-section-title" lang="">Company</h2>
+        <div class="company__content">
+          <dl class="company__list">
+            <div class="company__list-item">
+              <dt class="company__term">社名</dt>
+              <dd class="company__def">株式会社DIGSMILE</dd>
+            </div>
+            <div class="company__list-item">
+              <dt class="company__term">代表取締役</dt>
+              <dd class="company__def">テイラー・スウィフト</dd>
+            </div>
+            <div class="company__list-item">
+              <dt class="company__term">設立</dt>
+              <dd class="company__def">2020年1月1日</dd>
+            </div>
+            <div class="company__list-item">
+              <dt class="company__term">資本金</dt>
+              <dd class="company__def">1億円</dd>
+            </div>
+            <div class="company__list-item">
+              <dt class="company__term">所在地</dt>
+              <dd class="company__def">東京都新宿区☓☓0-0-0</dd>
+            </div>
+            <div class="company__list-item">
+              <dt class="company__term">電話番号</dt>
+              <dd class="company__def">03-0000-00000</dd>
+            </div>
+          </dl>
+          <div class="company__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d6480.826775662325!2d139.6974492!3d35.6914436!3m2!1i1024!2i768!4f13.1!2m1!1z5paw5a6_6aeF!5e0!3m2!1sja!2sjp!4v1738906938843!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div><!-- /.company__content -->
+      </div><!-- /.l-inner -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="l-column footer__inner">
+      <small class="footer__copyright">&copy;2018 DIGSMILE INC.</small>
+    </div>
+  </footer>
+
+  <!-- jquery -->
+  <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- JSファイル -->
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
