@@ -13,9 +13,6 @@
   <!--CSSファイル-->
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/common.css">
-  <!-- Slick -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 <body>
 
@@ -58,7 +55,7 @@
     </div><!-- /.header__inner -->
   </header>
 
-  <main class="main page-about">
+  <main class="main page page-contact">
     <!-- FV -->
     <div id="fv" class="fv">
       <div class="fv__inner">
@@ -73,40 +70,78 @@
       </div><!-- /.fv__inner -->
     </div><!-- /.fv -->
 
-    <section class="contact-form">
-      <h2 class="hidden">お問い合わせフォーム</h2>
-      <p>ご依頼やご相談についてのご質問やご要望がございましたら、下記フォームよりお気軽にお問い合わせください。送付いただいた内容を確認の上、担当者からご連絡させていただきます。</p>
-      <form action="" class="form">
-        <div class="form-group">
-          <input type="radio" name="" class="inquiry-type">制作依頼
-          <input type="radio" name="" class="inquiry-type">採用
-          <input type="radio" name="" class="inquiry-type">IR
-          <input type="radio" name="" class="inquiry-type">その他
-        </div><!-- /.form-group -->
-        <div class="form-group">
-          <span>会社名・団体名</span>
-          <input type="text" name="" id="">
-        </div><!-- /.form-group -->
-        <div class="form-group">
-          <span>お名前</span>
-          <input type="text" name="" id="">
-        </div><!-- /.form-group -->
-        <div class="form-group">
-          <span>メールアドレス</span>
-          <input type="email" name="" id="">
-        </div><!-- /.form-group -->
-        <div class="form-group">
-          <span>電話番号</span>
-          <input type="tel" name="" id="">
-        </div><!-- /.form-group -->
-        <div class="form-group">
-          <span>お問い合わせ内容</span>
-          <textarea name="" id=""></textarea>
-        </div><!-- /.form-group -->
-      </form>
-    </section>
+    <div class="l-page-content__wrapper">
+      <section class="contact__form">
+        <div class="l-inner">
+          <h2 class="hidden">お問い合わせフォーム</h2>
+          <p class="c-content-text">ご依頼やご相談についてのご質問やご要望がございましたら、下記フォームよりお気軽にお問い合わせください。送付いただいた内容を確認の上、担当者からご連絡させていただきます。</p>
+          <form action="confirm.php" method="post" class="form">
+            <div class="form__item">
+              <fieldset>
+                <legend class="form__item-label">お問い合わせ種別<span class="require-label">必須</span></legend>
+                <div class="l-column inquiry-type__list">
+                  <div class="inquiry-type__list-item">
+                    <input type="radio" name="inquiry_type" id="inquiry-production" class="inquiry-type" required>
+                    <label for="inquiry-production">制作依頼</label>
+                  </div>
+                  <div class="inquiry-type__list-item">
+                    <input type="radio" name="inquiry_type" id="inquiry-recruitment" class="inquiry-type">
+                    <label for="inquiry-recruitment">採用</label>
+                  </div>
+                  <div class="inquiry-type__list-item">
+                    <input type="radio" name="inquiry_type" id="inquiry-ir" class="inquiry-type">
+                    <label for="inquiry-ir">IR</label>
+                  </div>
+                  <div class="inquiry-type__list-item">
+                    <input type="radio" name="inquiry_type" id="inquiry-other" class="inquiry-type">
+                    <label for="inquiry-other">その他</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div><!-- /.form__item -->
+            <div class="form__item">
+              <label class="form__item-label">会社名・団体名</label>
+              <input type="text" name="group_name">
+            </div><!-- /.form__item -->
+            <div class="form__item">
+              <label class="form__item-label">お名前<span class="require-label">必須</span></label>
+              <input type="text" name="name">
+            </div><!-- /.form__item -->
+            <div class="form__item">
+              <label class="form__item-label">メールアドレス<span class="require-label">必須</span></label>
+              <input type="email" name="email">
+            </div><!-- /.form__item -->
+            <div class="form__item">
+              <label class="form__item-label">電話番号<span class="require-label">必須</span></label>
+              <input type="tel" name="tel">
+            </div><!-- /.form__item -->
+            <div class="form__item">
+              <label class="form__item-label">お問い合わせ内容<span class="require-label">必須</span></label>
+              <textarea name="inquiry_detail"></textarea>
+            </div><!-- /.form__item -->
+            <div class="form__item--personal">
+              <span lang="en" class="form__item-span form__item-label--personal">Privacy Policy</span>
+              <div class="personal__desc-wrapper">
+                <div class="personal__desc--scroll">
+                  <p class="personal__desc">
+                      当社は、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築し、全従業員に個人情報保護の重要性の認識と取組みを徹底させることにより、個人情報の保護を推進致します。<br>
+                      当社は、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。
+                    </p>
+                </div><!-- /.personal__desc--scroll -->
+              </div><!-- /.personal__desc-wrapper -->
+              <div class="personal__check">
+                <span class="personal__checkbox">
+                  <input type="checkbox" name="checkbox" id="personal-check" required>
+                </span>
+                <label for="personal-check">個人情報の取り扱いについて同意のうえ送信します。</label>
+              </div><!-- /.checkbox -->
+            </div><!-- /.form__item--personal -->
+            <button type="submit" class="submit-btn" id="submitbtn">送信</button>
 
-
+          </form>
+        </div><!-- /.l-inner -->
+      </section>
+    </div><!-- /.l-page-content__wrapper -->
   </main>
 
   <footer class="footer">
@@ -114,6 +149,11 @@
       <small class="footer__copyright">&copy;2018 DIGSMILE INC.</small>
     </div>
   </footer>
+  <div class="sp scroll-down">
+    <div class="scroll-down__label">
+      <span class="scroll-down__label" lang="en">Scroll</span>
+    </div>
+  </div><!-- /.scroll-down sp -->
 
   <!-- jquery -->
   <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
