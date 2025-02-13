@@ -916,7 +916,12 @@ img {
     height: 60.059vh;
   }
 }
-
+@media screen and (min-width: 1440px) {
+  .page-contact .fv__inner {
+    height: 51.8vh;
+    background: linear-gradient(90deg, var(--white) 0%, var(--white) 45.833%, var(--bg-fv) 45.833%, var(--bg-fv) 54.167%);
+  }
+}
 .page-contact .fv__content {
   top: 65.6%;
   right: -18vw;
@@ -931,6 +936,14 @@ img {
     text-align: left;
   }
 }
+@media screen and (min-width: 1440px) {
+  .page-contact .fv__content {
+    top: 56.6%;
+    right: -13.3vw;
+    letter-spacing: 0.063em;
+  }
+}
+
 .page-contact .fv__bg-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(../img/heading-img_contact_sp.png);
   height: 40.48vh;
@@ -941,6 +954,12 @@ img {
   .page-contact .fv__bg-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(../img/heading-img_contact.png);
     height: 51.66vh;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .page-contact .fv__bg-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(../img/heading-img_contact.png);
+    height: 44.4vh;
   }
 }
 
@@ -956,9 +975,22 @@ img {
     padding-right: 50px;
     padding-left: 50px;
   }
+}
+@media screen and (min-width: 1440px) {
+  .contact-page-content__wrapper {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
 
+@media screen and (min-width: 768px) {
   .contact-page-content__wrapper .l-inner {
     padding: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact-page-content__wrapper .l-inner {
+    max-width: 700px;
   }
 }
 
@@ -974,6 +1006,11 @@ img {
     margin-top: 0;
   }
 }
+@media screen and (min-width: 1440px) {
+  .contact__form .c-content-text {
+    margin-bottom: 57px;
+  }
+}
 
 /* 音合わせフォーム */
 .form {
@@ -985,6 +1022,12 @@ img {
   .form {
     gap: 35px;
     padding-top: 9px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .form {
+    gap: 40px;
+    padding-top: 0;
   }
 }
 
@@ -1077,6 +1120,11 @@ img {
 .form__item--input {
   height: 48px;
 }
+@media screen and (min-width: 1440px) {
+  .form__item--input {
+    height: 41px;
+  }
+}
 
 .form__item--textarea {
   height: 210px;
@@ -1086,12 +1134,28 @@ img {
     height: 180px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .form__item--textarea {
+    height: 212px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .form__item--personal {
+    margin-top: -5px;
+  }
+}
 
 .personal__desc-wrapper {
   width: 100%;
   height: 226px;
   border: 1px solid var(--black);
   padding: 10px 10px 0;
+}
+@media screen and (min-width: 1440px) {
+  .personal__desc-wrapper {
+    height: 252px;
+  }
 }
 
 .personal__desc {
