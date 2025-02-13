@@ -737,12 +737,7 @@ img {
 * ========================= */
 .footer {
   background-color: var(--bg-footer);
-  height: 35px;
-}
-@media screen and (min-width: 768px) {
-  .footer {
-    height: 50px;
-  }
+  height: 50px;
 }
 .footer__inner.l-column {
   height: 100%;
@@ -921,9 +916,9 @@ img {
 
 .page-contact .fv__content {
   top: 65.6%;
-  right: -15.4vw;
+  right: -18vw;
   text-align: right;
-  letter-spacing: 0.063em;
+  letter-spacing: 0.2em;
   line-height: 1.37;
 }
 @media screen and (min-width: 768px) {
@@ -945,7 +940,8 @@ img {
 
 .contact__form .c-content-text {
   line-height: 1.71;
-  margin-bottom: 51px;
+  margin-bottom: 50px;
+  margin-top: -5px;
 }
 
 /* 音合わせフォーム */
@@ -957,11 +953,11 @@ img {
 .form__item-label {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   font-size: var(--fs-form-label);
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .require-label {
@@ -990,8 +986,9 @@ img {
 }
 
 .inquiry-type {
-  width: auto;
-  margin: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 10px;
 }
 
 .inquiry-type__label {
@@ -1006,29 +1003,65 @@ img {
   margin-bottom: 20px;
 }
 
+.form__item--input,
+.form__item--textarea {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+}
+
+.form__item--input {
+  height: 48px;
+}
+
+.form__item--textarea {
+  height: 210px;
+}
+
 .personal__desc-wrapper {
   width: 100%;
+  height: 226px;
   border: 1px solid var(--black);
   padding: 10px;
 }
 
-.form__item--personal .personal__desc--scroll {
+.personal__desc {
+  font-size: var(--fs-c-content-text);
+  line-height: 1.71;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.personal__desc--scroll {
   width: 100%;
-  height: 100px;
+  height: 206px;
   overflow-y: scroll;
   scrollbar-width: none;
 }
 
-.form__item--personal .personal__desc {
-  font-size: var(--font-16);
-  line-height: 1.5;
+.personal__desc-label {
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.personal__desc-list {
+  list-style: decimal;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .personal__check {
   margin-top: 40px;
   display: flex;
   gap: 10px;
+  font-size: var(--fs-c-content-text);
+  line-height: 1.71;
+  letter-spacing: 0.004em;
 }
+
 .submit-btn {
   width: 160px;
   height: 36px;
@@ -1037,12 +1070,14 @@ img {
   color: var(--white);
 }
 
-/* スクロールバー */
+/* ============================
+* スクロールダウン
+* ========================= */
 .scroll-down {
   transform: rotate(-90deg);
   position: absolute;
-  top: 350px;
-  left: 12px;
+  top: 48vh;
+  left: -6px;
   z-index: 2;
 }
 
@@ -1064,24 +1099,18 @@ img {
   top: 50%;
   transform: translateY(-50%);
   margin-left: 4.8px;
-  animation: scroll 2s infinite;
+  transform-origin: left;
+  animation: lineFlow 2s infinite;
+  background: linear-gradient(90deg, #fff 0%, #000 50%);
+  background-size: 200% 100%;
+  animation: lineFlow 2s infinite linear;
 }
 /* 線のアニメーション */
-@keyframes scroll {
+@keyframes lineFlow {
   0% {
-    transform: scale(1, 0);
-    transform-origin: 0 0;
-  }
-  50% {
-    transform: scale(1, 1);
-    transform-origin: 0 0;
-  }
-  51% {
-    transform: scale(1, 1);
-    transform-origin: 0 100%;
+    background-position: -100% 0;
   }
   100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%;
+    background-position: 100% 0;
   }
 }

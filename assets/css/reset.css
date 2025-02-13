@@ -181,8 +181,7 @@ select {
   border: none;
 }
 
-ul,
-ol {
+ul {
   list-style: none;
 }
 
