@@ -984,6 +984,7 @@ img {
 @media screen and (min-width: 768px) {
   .form {
     gap: 35px;
+    padding-top: 9px;
   }
 }
 
@@ -999,6 +1000,7 @@ img {
 @media screen and (min-width: 768px) {
   .form__item-label {
     line-height: 1.5;
+    margin-bottom: 8px;
   }
 }
 
@@ -1023,6 +1025,8 @@ img {
 @media screen and (min-width: 768px) {
   .contact__form .l-column.inquiry-type__list {
     flex-direction: row;
+    align-items: center;
+    gap: 50px;
   }
 }
 
@@ -1037,6 +1041,11 @@ img {
   height: 20px;
   margin: 0 0 0 10px;
 }
+@media screen and (min-width: 768px) {
+  .inquiry-type {
+    margin: 0;
+  }
+}
 
 .inquiry-type__label {
   display: block;
@@ -1047,7 +1056,16 @@ img {
 }
 
 .form__item:first-of-type .form__item-label {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+}
+@media screen and (min-width: 768px) {
+  .form__item:first-of-type {
+    margin-left: 10px;
+  }
+
+  .form__item:first-of-type .form__item-label {
+    margin-bottom: 15px;
+  }
 }
 
 .form__item--input,
@@ -1077,8 +1095,10 @@ img {
 }
 
 .personal__desc {
+  font-family: "Noto Sans JP";
   font-size: var(--fs-c-content-text);
   line-height: 1.71;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -1101,12 +1121,23 @@ img {
   }
 }
 .personal__desc-label {
+  display: block;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 768px) {
+  .personal__desc-label {
+    margin-bottom: 5px;
+  }
+
+  .personal__desc-text {
+    line-height: 1.4;
+  }
+}
 
 .personal__desc-list {
+  font-family: "Noto Sans JP";
   list-style: decimal;
   list-style-position: inside;
   display: flex;
