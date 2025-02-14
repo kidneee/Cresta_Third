@@ -44,7 +44,7 @@ html:focus-within {
 }
 
 body {
-  font-family: "Montserrat", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
   font-size: 100%;
   box-sizing: border-box;
@@ -72,6 +72,7 @@ img {
 /* 英語フォント指定 */
 [lang="en"] {
   text-transform: uppercase;
+  font-family: "Montserrat", san-serif;
 }
 
 /* セクションタイトル */
@@ -748,6 +749,9 @@ img {
 /* ============================
 * Aboutページ
 * ========================= */
+/*-------------------------
+  FV
+-------------------------*/
 .page-about .fv__inner {
   height: 67.316vh;
   background: linear-gradient(90deg, var(--white) 0%, var(--white) 47.2%, var(--bg-fv) 47.2%, var(--bg-fv) 52.8%);
@@ -755,6 +759,13 @@ img {
 @media screen and (min-width: 768px) {
   .page-about .fv__inner {
     height: 60.059vh;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .page-about .fv__inner {
+    background: linear-gradient(90deg, var(--white) 0%, var(--white) 45.833%, var(--bg-fv) 45.833%, var(--bg-fv) 54.167%);
+    height: 53.1vh;
   }
 }
 
@@ -766,6 +777,14 @@ img {
     right: -10.4vw;
   }
 }
+@media screen and (min-width: 1440px) {
+  .page-about .fv__content {
+    top: 56%;
+    right: -11.7vw;
+    letter-spacing: 0.25em;
+  }
+}
+
 .page-about .fv__bg-img {
   background-image: url(../img/heading-img.png);
   height: 58.021vh;
@@ -775,10 +794,24 @@ img {
     height: 51.66vh;
   }
 }
+@media screen and (min-width: 1440px) {
+  .page-about .fv__bg-img {
+    height: 44.6vh;
+  }
+}
 
-.l-page-content__wrapper {
+/*-------------------------
+  コンテンツ
+-------------------------*/
+.page-about-content__wrapper {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+@media screen and (min-width: 1440px) {
+  .page-about-content__wrapper {
+    padding-top: 124px;
+    padding-bottom: 120px;
+  }
 }
 
 .page-about .l-inner {
@@ -786,14 +819,40 @@ img {
   flex-direction: column;
   gap: 30px;
 }
+@media screen and (min-width: 768px) {
+  .page-about .l-inner {
+    padding: 0;
+  }
+}
 
+/* VISION */
 @media screen and (min-width: 768px) {
   .vision .l-inner {
     padding-left: 150px;
+    gap: 23px;
   }
+}
+@media screen and (min-width: 1440px) {
+  .vision .l-inner {
+    padding-left: 226px;
+    margin-bottom: 126px;
+  }
+}
 
-  .vision .c-content-text {
-    font-size: 0.875rem;
+@media screen and (min-width: 768px) {
+  .vision__title {
+    line-height: 1.22;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .vision .c-section-copy {
+    line-height: 1.46;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .vision .c-section-copy {
+    line-height: 1;
   }
 }
 
@@ -804,8 +863,35 @@ img {
   gap: 29px;
 }
 
+@media screen and (min-width: 768px) {
+  .vision__content .c-content-text {
+    font-size: 0.875rem;
+  }
+}
 .page-about .c-content-text {
   line-height: 2;
+}
+@media screen and (min-width: 1440px) {
+  .page-about .c-content-text::first-line {
+    line-height: 1.5;
+  }
+
+  .vision__content {
+    gap: 40px;
+  }
+}
+
+/* CEO */
+@media screen and (min-width: 1440px) {
+  .ceo .l-inner {
+    margin-bottom: 120px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .ceo__title {
+    line-height: 1.22;
+  }
 }
 
 .ceo__text-content {
@@ -829,6 +915,12 @@ img {
   .ceo__text-content {
     width: 770px;
     margin-left: auto;
+    padding: 80px 185px 90px;
+    gap: 33px;
+  }
+
+  .ceo__content {
+    gap: 41px;
   }
 }
 
@@ -852,10 +944,20 @@ img {
   margin-bottom: 40px;
   gap: 0;
 }
+@media screen and (min-width: 1440px) {
+  .company .l-inner {
+    margin-bottom: 0;
+  }
+}
 
 .company__title {
   padding-bottom: 30px;
   border-bottom: 1px solid #ddd;
+}
+@media screen and (min-width: 1440px) {
+  .company__title {
+    padding-bottom: 33px;
+  }
 }
 
 .company__list {
@@ -871,6 +973,7 @@ img {
 .company__list-item {
   display: flex;
   justify-content: space-between;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-size: var(--fs-c-content-text);
   padding: 22px 0;
   border-bottom: 1px solid #ddd;
@@ -881,9 +984,20 @@ img {
     margin-left: 30px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .company__list-item {
+    margin-left: 0;
+    padding: 20px 0;
+  }
+}
 
 .company__def {
   width: 50%;
+}
+@media screen and (min-width: 1440px) {
+  .company__def {
+    width: 82%;
+  }
 }
 
 .company__map iframe {
@@ -966,30 +1080,30 @@ img {
 /*-------------------------
   コンテンツ
 -------------------------*/
-.contact-page-content__wrapper {
+.page-contact-content__wrapper {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 @media screen and (min-width: 768px) {
-  .contact-page-content__wrapper {
+  .page-contact-content__wrapper {
     padding-right: 50px;
     padding-left: 50px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .contact-page-content__wrapper {
+  .page-contact-content__wrapper {
     padding-top: 120px;
     padding-bottom: 120px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .contact-page-content__wrapper .l-inner {
+  .page-contact-content__wrapper .l-inner {
     padding: 0;
   }
 }
 @media screen and (min-width: 1440px) {
-  .contact-page-content__wrapper .l-inner {
+  .page-contact-content__wrapper .l-inner {
     max-width: 700px;
   }
 }
@@ -1108,6 +1222,11 @@ img {
 
   .form__item:first-of-type .form__item-label {
     margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .form__item:first-of-type .form__item-label {
+    margin-left: -10px;
   }
 }
 
