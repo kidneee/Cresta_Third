@@ -755,11 +755,11 @@ img {
 .page-about .fv__inner {
   height: 67.316vh;
   background: linear-gradient(90deg, var(--white) 0%, var(--white) 47.2%, var(--bg-fv) 47.2%, var(--bg-fv) 52.8%);
+  margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
   .page-about .fv__inner {
     height: 60.059vh;
-    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -824,6 +824,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 80px;
 }
 @media screen and (min-width: 768px) {
   .page-about .l-inner {
@@ -836,7 +837,6 @@ img {
   .vision .l-inner {
     padding-left: 150px;
     gap: 23px;
-    margin-bottom: 80px;
   }
 }
 @media screen and (min-width: 1440px) {
