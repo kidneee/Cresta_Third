@@ -319,7 +319,7 @@ img {
   width: 61px;
   top: 50%;
   transform: translateY(-50%);
-  height: 10px;
+  height: 13px;
   position: absolute;
   right: 15px;
   z-index: 100;
@@ -339,12 +339,12 @@ img {
 .hamburger {
   right: 0;
   width: 22px;
-  height: 10px;
+  height: 13px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 3px;
   z-index: 100;
 }
 
@@ -354,34 +354,17 @@ img {
 }
 
 .hamburger__line {
+  display: block;
   margin: auto;
   width: 22px;
-  height: 2px;
+  height: 4px;
+  transform: scaleY(0.5);
   background-color: var(--white);
   transition: transform 0.3s, opacity 0.3s;
   position: absolute;
   z-index: 100;
 }
 
-.hamburger__line::before,
-.hamburger__line::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-  -webkit-transition: inherit;
-  transition: inherit;
-}
-
-.hamburger__line::before {
-  top: -5px;
-}
-
-.hamburger__line::after {
-  top: 5px;
-}
 .hamburger__label {
   display: block;
   font-size: var(--fs-ham-label);
@@ -390,40 +373,40 @@ img {
   font-weight: bold;
 }
 
-.hidden-text {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+.hamburger__line:nth-of-type(1) {
+  top: 0px;
+}
+
+.hamburger__line:nth-of-type(2) {
+  top: 5px;
+}
+
+.hamburger__line:nth-of-type(3) {
+  top: 10px;
 }
 
 /* メニューオープン時のクラス */
-.hamburger[aria-expanded="true"] .hamburger__line {
+.hamburger[aria-expanded="true"] .hamburger__line:nth-of-type(2) {
   background-color: transparent;
 }
 
-.hamburger[aria-expanded="true"] .hamburger__line::before,
-.hamburger[aria-expanded="true"] .hamburger__line::after {
-  top: 0;
+.hamburger[aria-expanded="true"] .hamburger__line:nth-of-type(1),
+.hamburger[aria-expanded="true"] .hamburger__line:nth-of-type(3) {
+  top: 5px;
   background-color: var(--white);
   z-index: 100;
 }
 
-.hamburger[aria-expanded="true"] .hamburger__line::before {
+.hamburger[aria-expanded="true"] .hamburger__line:nth-of-type(1) {
   -webkit-transform: rotate(-345deg);
   -ms-transform: rotate(-345deg);
-  transform: rotate(-345deg);
+  transform: rotate(-345deg) scaleY(0.5);
 }
 
-.hamburger[aria-expanded="true"] .hamburger__line::after {
+.hamburger[aria-expanded="true"] .hamburger__line:nth-of-type(3) {
   -webkit-transform: rotate(345deg);
   -ms-transform: rotate(345deg);
-  transform: rotate(345deg);
+  transform: rotate(345deg) scaleY(0.5);
 }
 
 /* ============================
