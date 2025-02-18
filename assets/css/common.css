@@ -1357,27 +1357,35 @@ img {
   }
 }
 
-#personal-check {
+input[type="checkbox"].checkbox {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  /* サイズ指定 */
-  width: 16px; /* お好みのサイズに変更可能 */
+  width: 16px;
   height: 16px;
-  /* ボーダーの設定 */
   border: 1px solid #000;
-  border-radius: 0; /* 角を四角に */
-  /* その他のスタイル */
   background-color: #fff;
   cursor: pointer;
+  position: relative;
 }
+
+input[type="checkbox"].checkbox:checked::before {
+  content: "✔";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  font-size: 14px;
+  color: #000;
+}
+
 @media screen and (min-width: 768px) {
-  #personal-check {
+  input[type="checkbox"].checkbox {
     width: 20px;
     height: 20px;
   }
 }
-
 .submit-btn {
   width: 160px;
   height: 36px;

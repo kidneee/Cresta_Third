@@ -170,6 +170,11 @@ textarea {
   -ms-box-sizing: border-box;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
 }
 
 select,
